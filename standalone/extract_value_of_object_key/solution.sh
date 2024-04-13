@@ -1,2 +1,4 @@
 #!/bin/bash -e
-jq '.["fruit"]' input.json > output.json
+
+# the -r is for raw output, without the quotation marks
+jq -r '.["fruit"]' input.json > output.json
