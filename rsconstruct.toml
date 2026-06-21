@@ -1,0 +1,2 @@
+[processor.zspell]
+src_dirs = ["exercises"]
