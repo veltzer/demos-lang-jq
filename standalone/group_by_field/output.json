@@ -1,0 +1,22 @@
+[
+  [
+    {
+      "name": "Alice",
+      "dept": "eng"
+    },
+    {
+      "name": "Carol",
+      "dept": "eng"
+    }
+  ],
+  [
+    {
+      "name": "Bob",
+      "dept": "sales"
+    },
+    {
+      "name": "Dave",
+      "dept": "sales"
+    }
+  ]
+]
