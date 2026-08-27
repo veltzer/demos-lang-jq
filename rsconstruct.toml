@@ -56,3 +56,10 @@ src_dirs = ["exercises"]
 # explicitly — otherwise editing an input.json or output.json alone would leave
 # a stale cached pass.
 dep_inputs = ["exercises/*/input.json", "exercises/*/output.json"]
+
+# lint the GitHub Actions workflow files with actionlint
+[processor.actionlint]
+src_dirs = [".github/workflows"]
+# actionlint 1.7.12's runner-label list predates the official ubuntu-26.04
+# hosted runner; drop this ignore once a newer actionlint knows the label
+args = ["-ignore", 'label "ubuntu-26\.04" is unknown']
