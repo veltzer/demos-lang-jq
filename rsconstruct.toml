@@ -1,5 +1,4 @@
-# rsconstruct configuration for this repository — shared defaults plus
-# repo-specific config (merged from the former rsconstruct.local.toml).
+# rsconstruct build configuration for this repository.
 
 [build]
 
@@ -41,7 +40,7 @@ args = ["--severity=error", "--shell=bash"]
 [processor.taplo]
 src_dirs = ["."]
 
-# ─── merged from rsconstruct.local.toml ─────────────────────────────────────
+# ─── repo-specific configuration ────────────────────────────────────────────
 
 # Run every exercise's solution.sh against its input.json and require that the
 # result matches the committed output.json. The script processor discovers one
