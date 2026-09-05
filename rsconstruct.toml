@@ -14,6 +14,7 @@
 
 [processor.rumdl]
 src_dirs = ["exercises"]
+src_files = ["README.md"]
 
 [processor.zspell]
 src_dirs = ["exercises"]
@@ -33,7 +34,6 @@ src_dirs = ["scripts", "exercises"]
 
 [processor.shellcheck]
 src_dirs = ["scripts", "exercises"]
-args = ["--severity=error", "--shell=bash"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
@@ -59,3 +59,11 @@ dep_inputs = ["exercises/*/input.json", "exercises/*/output.json"]
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
 src_dirs = [".github/workflows"]
+
+# ─── json ────────────────────────────────────────────────────────────────────
+
+# only input.json is an authored JSON document; output.json holds jq's output,
+# which for -r queries is a raw string and not valid JSON by design.
+[processor.ijsonlint]
+src_dirs = ["exercises"]
+src_exclude_files = ["output.json"]
