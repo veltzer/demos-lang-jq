@@ -60,6 +60,11 @@ dep_inputs = ["exercises/*/input.json", "exercises/*/output.json"]
 [processor.checker.iactionlint]
 src_dirs = [".github/workflows"]
 
+# audit the GitHub Actions workflow files for security problems with zizmor
+# (policy: .github/zizmor.yml)
+[processor.checker.zizmor]
+src_dirs = [".github/workflows"]
+
 # ─── json ────────────────────────────────────────────────────────────────────
 
 # only input.json is an authored JSON document; output.json holds jq's output,
