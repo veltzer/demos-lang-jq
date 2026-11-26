@@ -56,6 +56,10 @@ src_dirs = ["exercises"]
 # a stale cached pass.
 dep_inputs = ["exercises/*/input.json", "exercises/*/output.json"]
 
+# lint the Lua configuration with luacheck (policy: .luacheckrc)
+[processor.checker.iluacheck]
+src_dirs = ["config"]
+
 # lint the YAML files with yamllint (policy: .yamllint.yaml)
 [processor.checker.iyamllint]
 src_dirs = [".github"]
